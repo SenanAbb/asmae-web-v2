@@ -1,0 +1,74 @@
+.navbar {
+  --nav-color: white;
+  color: var(--nav-color);
+  height: 10dvh;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: transparent;
+
+  animation: fadeBackground 0.5s ease-in-out;
+  animation-timeline: scroll(root);
+  animation-fill-mode: both;
+  animation-range: 0% 100px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    min-width: 9rem;
+  }
+
+  img {
+    width: 3.2rem;
+  }
+
+  ul {
+    display: flex;
+    gap: 3rem;
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: currentColor;
+      font-size: 1rem;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: var(--primary-light);
+      }
+    }
+
+    @media (width < 800px) {
+      display: none;
+    }
+  }
+
+  .right {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+@keyframes fadeBackground {
+  from {
+    background-color: transparent;
+    --nav-color: white;
+  }
+  to {
+    background-color: var(--white);
+    --nav-color: black;
+  }
+}

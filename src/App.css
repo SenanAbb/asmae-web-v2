@@ -1,0 +1,6 @@
+.separator {
+  width: 10rem;
+  height: .15rem;
+  background-color: var(--secondary-light);
+  margin: 1.4rem 0;
+}
