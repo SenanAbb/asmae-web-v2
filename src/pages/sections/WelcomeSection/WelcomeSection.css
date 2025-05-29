@@ -1,0 +1,63 @@
+.welcome-section {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 80px 20px;
+
+  .welcome-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .welcome-text {
+    flex: 1;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: var(--black);
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--gray-text);
+      margin-bottom: 30px;
+    }
+
+    .benefits {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+
+      li {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        color: var(--gray-text);
+        position: relative;
+        padding-left: 1.5em;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: '✔';
+          position: absolute;
+          left: 0;
+          color: var(--primary);
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

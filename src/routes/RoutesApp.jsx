@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home';
 import Navbar from '../components/Navbar/Navbar';
+import { Footer } from '../components/Footer/Footer';
 
 export default function RoutesApp() {
   return (
@@ -15,9 +16,7 @@ export default function RoutesApp() {
         </Routes>
       </main>
 
-      <footer style={{height: '100dvh'}}>
-        <p>Footer</p>
-      </footer>
+      <Footer />
     </BrowserRouter>
   );
 }

@@ -29,11 +29,7 @@
     z-index: 100;
     cursor: pointer;
     position: absolute;
-
-    animation: colorChange 0.5s ease-in-out;
-    animation-timeline: scroll(root);
-    animation-fill-mode: both;
-    animation-range: 0% 100px;
+    background-color: var(--white);
 
     &:nth-child(2) {
       top: 0;
@@ -112,11 +108,6 @@
   }
 }
 
-@keyframes colorChange {
-  0% {
-    background: var(--white);
-  }
-  100% {
-    background: var(--black);
-  }
+.menuToggle.ham-scrolled span {
+  background-color: var(--black);
 }

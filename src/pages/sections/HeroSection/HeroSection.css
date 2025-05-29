@@ -88,12 +88,14 @@
       position: relative;
 
       .title {
-        margin-top: calc(100dvh - 45dvh - 7rem);
+        margin-top: 55dvh;
         margin-left: 0;
+        align-items: center;
 
         h1 {
           font-size: 3.6rem;
           line-height: 3.6rem;
+          text-align: center;
         }
       }
 
@@ -103,6 +105,7 @@
         left: 50%;
         transform: translateX(-50%);
         z-index: -1;
+        width: calc(100dvh - 13rem);
       }
     }
   }

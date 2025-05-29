@@ -14,7 +14,7 @@ export const HeroSection = () => {
 
   return (
     <section className="hero-section">
-      <video src="videos/hero-video.mp4" autoPlay loop muted playsinline>
+      <video src="videos/hero-video.mp4" autoPlay loop muted playsInline>
         <source src="videos/hero-video.mp4" type="video/mp4" />
       </video>
       <div className="black-overlay"></div>

@@ -8,5 +8,21 @@
   "navbar_contact_label": "Contact",
   "navbar_expertises_label": "Expertises",
 
-  "hero_subtitle": "Graduate"
+  "hero_subtitle": "Graduate",
+
+  "welcome_section_title": "Welcome to the Law Office of Asmae Kirimov",
+  "welcome_section_subtitle": "Your Trusted Legal Partner in France",
+  "welcome_section_description": "Providing expert legal advice and representation for individuals and businesses with clarity, dedication, and professionalism.",
+  "welcome_section_benefit_1": "Over 10 years of legal experience",
+  "welcome_section_benefit_2": "Personalized support and transparent communication",
+  "welcome_section_benefit_3": "Fluent in English and French",
+  "welcome_section_button": "Book a Consultation",
+
+  "footer_section_links_label": "Fast links",
+  "footer_section_contact_label": "Contact",
+  "footer_section_time_label": "Opening time",
+  "footer_section_monday_friday_label": "M-F",
+  "footer_section_saturday_label": "Saturday",
+  "footer_section_sunday_label": "Sunday",
+  "footer_section_closed_label": "Closed"
 }

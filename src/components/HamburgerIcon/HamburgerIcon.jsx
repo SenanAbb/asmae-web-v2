@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import './HamburgerIcon.css';
@@ -7,9 +7,22 @@ import { Link } from 'react-router-dom';
 
 export const HamburgerIcon = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const inputRef = useRef(null);
 
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleToggle = () => {
     setOpen(!open);
@@ -17,7 +30,7 @@ export const HamburgerIcon = () => {
   };
 
   return (
-    <div className="menuToggle">
+    <div className={`menuToggle ${scrolled ? 'ham-scrolled' : ''}`}>
       <input
         type="checkbox"
         ref={inputRef}
