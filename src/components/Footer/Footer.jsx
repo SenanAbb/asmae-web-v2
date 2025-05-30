@@ -73,10 +73,10 @@ export const Footer = () => {
                 <AiFillPhone size={28} /> <p>(+33) 6 41 22 81 53</p>
               </li>
               <li>
-                <AiFillMail size={28} /> <p> asmaekirimov.avocat@gmail.com</p>
+                <AiFillMail size={28} /> <p>asmaekirimov.avocat@gmail.com</p>
               </li>
               <li>
-                <BsFillPinMapFill size={28} />{' '}
+                <BsFillPinMapFill size={28} />
                 <p> 22 rue des Cordeliers, 64 000 Pau</p>
               </li>
             </ul>

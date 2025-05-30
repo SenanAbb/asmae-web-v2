@@ -31,8 +31,8 @@ export const ExpertisesSection = () => {
       <div className="container">
         <div className="expertises-container">
           {expertises.map((expertise, index) => (
-            <div key={index} className="expertise" onClick={() => {}}>
-              <img src={expertise.image} alt="" />
+            <article key={index} className="expertise" onClick={() => {}}>
+              <img src={expertise.image} alt="Expertise" loading="lazy" />
               <div className="overlay"></div>
               <div className="expertise-content">
                 <h2>{expertise.title}</h2>
@@ -46,7 +46,7 @@ export const ExpertisesSection = () => {
                   />
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
