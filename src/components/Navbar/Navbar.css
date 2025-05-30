@@ -11,7 +11,7 @@
   width: 100%;
   z-index: 999;
   background-color: transparent;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.1s ease, color 0.1s ease;
 
   .container {
     display: flex;
@@ -39,7 +39,7 @@
       text-decoration: none;
       color: currentColor;
       font-size: 1rem;
-      transition: color 0.2s ease-in-out;
+      transition: color 0.1s ease-in-out;
 
       &:hover {
         color: var(--primary-light);

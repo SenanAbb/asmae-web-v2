@@ -9,8 +9,6 @@ export default function Navbar() {
   const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
 
-  console.log(scrolled);
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -27,7 +25,15 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <Link to="/" className="logo">
-          <img src="/images/logo-color.webp" alt="Logo" />
+          {scrolled ? (
+            <img src="/images/logo-color.webp" alt="Logo" />
+          ) : (
+            <img
+              src="/images/logo-negro.webp"
+              alt="Logo"
+              style={{ filter: 'invert(1)' }}
+            />
+          )}
         </Link>
         <ul>
           <li>

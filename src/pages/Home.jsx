@@ -1,4 +1,6 @@
+import { ExpertisesSection } from './sections/ExpertisesSection/ExpertisesSection';
 import { HeroSection } from './sections/HeroSection/HeroSection';
+import { InformationSection } from './sections/InformationSection/InformationSection';
 import { WelcomeSection } from './sections/WelcomeSection/WelcomeSection';
 
 export default function Home() {
@@ -6,6 +8,8 @@ export default function Home() {
     <>
       <HeroSection />
       <WelcomeSection />
+      <ExpertisesSection />
+      <InformationSection />
     </>
   );
 }

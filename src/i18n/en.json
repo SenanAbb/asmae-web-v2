@@ -1,4 +1,6 @@
 {
+  "name": "Asmae Kirimov",
+
   "language_selector_english_label": "English",
   "language_selector_spanish_label": "Spanish",
   "language_selector_french_label": "French",
@@ -10,13 +12,31 @@
 
   "hero_subtitle": "Graduate",
 
-  "welcome_section_title": "Welcome to the Law Office of Asmae Kirimov",
+  "welcome_section_title": "Welcome to the Law Office of ",
   "welcome_section_subtitle": "Your Trusted Legal Partner in France",
   "welcome_section_description": "Providing expert legal advice and representation for individuals and businesses with clarity, dedication, and professionalism.",
   "welcome_section_benefit_1": "Over 10 years of legal experience",
   "welcome_section_benefit_2": "Personalized support and transparent communication",
   "welcome_section_benefit_3": "Fluent in English and French",
   "welcome_section_button": "Book a Consultation",
+
+  "expertises_section_title_1": "Business",
+  "expertises_section_subtitle_1": "Business and Corporate Law",
+  "expertises_section_description_1": "Expert legal advice and representation with clarity and professionalism.",
+
+  "expertises_section_title_2": "Immigration",
+  "expertises_section_subtitle_2": "Immigration and Nationality Law",
+  "expertises_section_description_2": "Clear, dedicated legal support for immigration and nationality cases.",
+
+  "expertises_section_title_3": "Public",
+  "expertises_section_subtitle_3": "Public Service Law",
+  "expertises_section_description_3": "Professional legal guidance for public sector employees and services.",
+
+  "expertises_section_title_4": "Injury",
+  "expertises_section_subtitle_4": "Personal Injury Law",
+  "expertises_section_description_4": "Compassionate and expert representation for personal injury claims.",
+
+  "expertises_section_button": "Learn more",
 
   "footer_section_links_label": "Fast links",
   "footer_section_contact_label": "Contact",

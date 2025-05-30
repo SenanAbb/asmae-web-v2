@@ -1,9 +1,30 @@
 {
+  "name": "Asmae Kirimov",
+
   "language_selector_english_label": "Inglés",
   "language_selector_spanish_label": "Español",
   "language_selector_french_label": "Francés",
 
   "navbar_home_label": "Inicio",
   "navbar_about_label": "Acerca de",
-  "navbar_contact_label": "Contacto"
+  "navbar_contact_label": "Contacto",
+  "navbar_expertises_label": "Especialidades",
+
+  "hero_subtitle": "Graduada",
+
+  "welcome_section_title": "Bienvenido al despacho de ",
+  "welcome_section_subtitle": "Su socia legal de confianza en Francia",
+  "welcome_section_description": "Brindando asesoría legal experta y representación para personas y empresas con claridad, dedicación y profesionalismo.",
+  "welcome_section_benefit_1": "Más de 10 años de experiencia legal",
+  "welcome_section_benefit_2": "Atención personalizada y comunicación transparente",
+  "welcome_section_benefit_3": "Domina el inglés y el francés",
+  "welcome_section_button": "Reservar una consulta",
+
+  "footer_section_links_label": "Enlaces rápidos",
+  "footer_section_contact_label": "Contacto",
+  "footer_section_time_label": "Horario de atención",
+  "footer_section_monday_friday_label": "L-V",
+  "footer_section_saturday_label": "Sábado",
+  "footer_section_sunday_label": "Domingo",
+  "footer_section_closed_label": "Cerrado"
 }

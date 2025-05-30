@@ -1,9 +1,30 @@
 {
+  "name": "Asmae Kirimov",
+
   "language_selector_english_label": "Anglais",
   "language_selector_spanish_label": "Espagnol",
   "language_selector_french_label": "Français",
 
   "navbar_home_label": "Accueil",
-  "navbar_about_label": "A propos",
-  "navbar_contact_label": "Contact"
+  "navbar_about_label": "À propos",
+  "navbar_contact_label": "Contact",
+  "navbar_expertises_label": "Expertises",
+
+  "hero_subtitle": "Maître",
+
+  "welcome_section_title": "Bienvenue au cabinet juridique de ",
+  "welcome_section_subtitle": "Votre partenaire juridique de confiance en France",
+  "welcome_section_description": "Offrant des conseils juridiques experts et une représentation pour les particuliers et les entreprises avec clarté, dévouement et professionnalisme.",
+  "welcome_section_benefit_1": "Plus de 10 ans d'expérience juridique",
+  "welcome_section_benefit_2": "Accompagnement personnalisé et communication transparente",
+  "welcome_section_benefit_3": "Parle couramment l'anglais et le français",
+  "welcome_section_button": "Prendre un rendez-vous",
+
+  "footer_section_links_label": "Liens rapides",
+  "footer_section_contact_label": "Contact",
+  "footer_section_time_label": "Horaires d'ouverture",
+  "footer_section_monday_friday_label": "L-V",
+  "footer_section_saturday_label": "Samedi",
+  "footer_section_sunday_label": "Dimanche",
+  "footer_section_closed_label": "Fermé"
 }

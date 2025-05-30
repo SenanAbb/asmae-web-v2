@@ -10,7 +10,10 @@ export const WelcomeSection = () => {
       <div className="container">
         <div className="welcome-content">
           <div className="welcome-text">
-            <h2>{t('welcome_section_title')}</h2>
+            <h2>
+              {t('welcome_section_title')}{' '}
+              <span className="name">{t('name')}</span>
+            </h2>
             <h3>{t('welcome_section_subtitle')}</h3>
             <p>{t('welcome_section_description')}</p>
 

@@ -1,7 +1,7 @@
 .button {
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 0.6rem 1.25rem;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1rem;
@@ -19,5 +19,16 @@
   &.secondary {
     background-color: var(--secondary);
     color: var(--white);
+  }
+
+  &.tertiary {
+    background-color: transparent;
+    border: 2px solid var(--secondary);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--secondary);
+      color: var(--black);
+    }
   }
 }
