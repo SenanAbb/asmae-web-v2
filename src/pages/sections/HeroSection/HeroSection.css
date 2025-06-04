@@ -53,7 +53,7 @@
       }
 
       p {
-        color: var(--secondary-light);
+        color: var(--primary-light);
         font-size: 2rem;
         font-weight: bold;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -69,7 +69,7 @@
 
           &:hover {
             cursor: pointer;
-            fill: var(--secondary-light);
+            fill: var(--primary-light);
           }
         }
       }

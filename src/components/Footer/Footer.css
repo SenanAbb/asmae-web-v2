@@ -1,5 +1,5 @@
 footer {
-  background-color: var(--black);
+  background-color: var(--primary);
   color: var(--white);
   padding: 2rem 0;
 
@@ -48,7 +48,7 @@ footer {
             animation: color 0.3s ease;
 
             &:hover {
-              color: var(--primary-light);
+              scale: 1.2;
             }
           }
         }
@@ -76,7 +76,7 @@ footer {
             animation: color 0.3s ease;
 
             &:hover {
-              color: var(--primary-light);
+              text-decoration: underline;
             }
           }
         }
@@ -137,7 +137,7 @@ footer {
             }
 
             &:nth-child(2) {
-              color: var(--primary-light)
+              color: var(--white)
             }
           }
         }

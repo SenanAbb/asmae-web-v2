@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from '../pages/Home';
+import HomePage from '../pages/HomePage';
 import Navbar from '../components/Navbar/Navbar';
 import { Footer } from '../components/Footer/Footer';
 
@@ -12,7 +12,7 @@ export default function RoutesApp() {
 
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomePage />} />
         </Routes>
       </main>
 

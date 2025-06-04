@@ -41,7 +41,7 @@ export const ExpertisesSection = () => {
                   <p>{expertise.description}</p>
                   <Button
                     text={t('expertises_section_button')}
-                    type="tertiary"
+                    type="primary"
                     onClick={() => {}}
                   />
                 </div>
