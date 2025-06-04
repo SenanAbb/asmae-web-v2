@@ -44,7 +44,7 @@ export const HeroSection = () => {
             </a>
           </div>
         </div>
-        <img src="images/asmae-nobg.webp" alt="Asmae" />
+        {/* <img src="images/asmae-nobg.webp" alt="Asmae" /> */}
       </div>
     </section>
   );
