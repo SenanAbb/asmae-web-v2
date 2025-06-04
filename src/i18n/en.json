@@ -42,6 +42,9 @@
   "information_section_phone_title": "Phone",
   "information_section_email_title": "Email",
 
+  "reviews_section_title": "Google reviews",
+  "reviews_section_button" : "Review us on Google",
+
   "footer_section_links_label": "Fast links",
   "footer_section_contact_label": "Contact",
   "footer_section_time_label": "Opening time",

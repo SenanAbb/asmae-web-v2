@@ -6,6 +6,10 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 
+    @media (width <= 1085px) {
+      grid-template-columns: 1fr;
+    }
+
     .expertise {
       min-height: 16rem;
       display: flex;
@@ -21,6 +25,7 @@
       transition: background-size 0.3s ease;
       position: relative;
       overflow: hidden;
+      flex: 0 0 calc(33.3333% - 2rem);
 
       h2 {
         text-align: center;
@@ -73,7 +78,7 @@
 
         h3 {
           font-size: 1.8rem;
-          color: var(--primary-light);
+          color: var(--primary);
         }
 
         p {
@@ -111,7 +116,7 @@
       }
 
       @media (width <= 768px) {
-        border:none;
+        border: none;
         min-height: 70dvh;
 
         h2 {

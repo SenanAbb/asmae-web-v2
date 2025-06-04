@@ -1,0 +1,60 @@
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  gap: 1rem;
+  touch-action: pan-y;
+  user-select: none;
+  padding: 0 1rem;
+  max-width: 100dvw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.embla__slide {
+  flex: 0 0 100%; /* Móvil: 1 por página */
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Desktop: 3 por página */
+@media (width >= 1085px) {
+  .embla__slide {
+    flex: 0 0 33.3333%;
+  }
+}
+
+.review-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem 0;
+  background-color: #f0f0f0;
+  border-radius: 0.3rem;
+  margin: 2rem 0;
+
+  .review-title-text-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    span {
+      font-size: 3.6rem;
+    }
+
+    h2 {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .stars {
+      svg {
+        color: var(--secondary);
+      }
+    }
+  }
+}
