@@ -43,7 +43,14 @@
   "information_section_email_title": "Email",
 
   "reviews_section_title": "Google reviews",
-  "reviews_section_button" : "Review us on Google",
+  "reviews_section_button": "Review me on Google",
+
+  "contact_section_title": "Contact me",
+  "contact_section_form_name_label": "Name",
+  "contact_section_form_email_label": "Email",
+  "contact_section_form_phone_label": "Phone",
+  "contact_section_form_message_label": "Message",
+  "contact_section_form_button": "Send message",
 
   "footer_section_links_label": "Fast links",
   "footer_section_contact_label": "Contact",

@@ -24,25 +24,27 @@ export const InformationSection = () => {
           </div>
           <div className="contact-info">
             <img src="/images/logo-color.webp" alt="Logo" />
-            <div className="info">
-              <AiFillPhone size={28} />
-              <div className="text">
-                <span>{t('information_section_phone_title')}</span>
-                <p>(+33) 6 41 22 81 53</p>
+            <div className="flex">
+              <div className="info">
+                <AiFillPhone size={28} />
+                <div className="text">
+                  <span>{t('information_section_phone_title')}</span>
+                  <p>(+33) 6 41 22 81 53</p>
+                </div>
               </div>
-            </div>
-            <div className="info">
-              <AiFillMail size={28} />
-              <div className="text">
-                <span>{t('information_section_email_title')}</span>
-                <p>asmaekirimov.avocat@gmail.com</p>
+              <div className="info">
+                <AiFillMail size={28} />
+                <div className="text">
+                  <span>{t('information_section_email_title')}</span>
+                  <p>asmaekirimov.avocat@gmail.com</p>
+                </div>
               </div>
-            </div>
-            <div className="info">
-              <BsFillPinMapFill size={28} />
-              <div className="text">
-                <span>{t('information_section_address_title')}</span>
-                <p>22 rue des Cordeliers, 64 000 Pau</p>
+              <div className="info">
+                <BsFillPinMapFill size={28} />
+                <div className="text">
+                  <span>{t('information_section_address_title')}</span>
+                  <p>22 rue des Cordeliers, 64 000 Pau</p>
+                </div>
               </div>
             </div>
           </div>

@@ -78,7 +78,7 @@
 
         h3 {
           font-size: 1.8rem;
-          color: var(--primary);
+          color: var(--primary-light);
         }
 
         p {
@@ -121,6 +121,10 @@
 
         h2 {
           display: none;
+        }
+
+        h3 {
+          font-size: 3rem;
         }
 
         .hide-content {

@@ -25,18 +25,18 @@ export const HeroSection = () => {
           <div className="separator"></div>
           <div className="social-links">
             <Link to="https://www.facebook.com/" target="_blank">
-              <AiFillFacebook size={28} />
+              <AiFillFacebook size={40} />
             </Link>
             <Link to="https://www.instagram.com/" target="_blank">
-              <AiFillInstagram size={28} />
+              <AiFillInstagram size={40} />
             </Link>
             <Link to="https://www.linkedin.com/" target="_blank">
-              <AiFillLinkedin size={28} />
+              <AiFillLinkedin size={40} />
             </Link>
 
             {/* !! TO CHANGE EMAIL */}
             <Link to="mailto:asmae@example.com" target="_blank">
-              <AiFillMail size={28} />
+              <AiFillMail size={40} />
             </Link>
 
             <a href="mailto:asmae@example.com">
@@ -44,7 +44,6 @@ export const HeroSection = () => {
             </a>
           </div>
         </div>
-        {/* <img src="images/asmae-nobg.webp" alt="Asmae" /> */}
       </div>
     </section>
   );

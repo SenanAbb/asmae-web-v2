@@ -13,8 +13,9 @@
   --primary-dark: #254d32;
   --primary-extra-light: #e5f0ee;
 
-  --secondary: #efb810;
-  --secondary-light: #f2c94c;
+  --secondary: #d79a10;
+  --secondary-light: #f7c94d;
+  --secondary-dark: #b27b0d;
 }
 
 * {
@@ -27,6 +28,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--white);
   color: var(--black);
+  overflow-x: hidden;
 }
 
 #root {

@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import './ReviewsSection.css';
-import { AiFillStar } from 'react-icons/ai';
+import { AiFillCaretRight, AiFillStar } from 'react-icons/ai';
 import { reviews } from '../../../data/reviews';
 import { useTranslation } from 'react-i18next';
 import { Button } from '../../../components/Button/Button';
@@ -59,10 +59,10 @@ export const ReviewsSection = () => {
             ))}
           </div>
           <button className="embla__prev" onClick={scrollPrev}>
-            Prev
+            <AiFillCaretRight />
           </button>
           <button className="embla__next" onClick={scrollNext}>
-            Next
+            <AiFillCaretRight />
           </button>
         </div>
       </div>

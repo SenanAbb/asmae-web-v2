@@ -6,11 +6,19 @@
   .welcome-content {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
 
     @media (min-width: 768px) {
       flex-direction: row;
       align-items: center;
+    }
+  
+    img {
+      width: 20rem;
+      height: 100%;
+
     }
   }
 
