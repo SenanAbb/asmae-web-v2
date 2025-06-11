@@ -18,8 +18,6 @@ export default function Navbar() {
       return;
     }
 
-    setScrolled(window.scrollY > 0);
-
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
