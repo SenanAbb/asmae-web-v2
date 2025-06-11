@@ -1,11 +1,11 @@
 .welcome-section {
   background-color: var(--white);
   color: var(--black);
-  padding: 3rem 0;
+  padding: 5rem 0;
 
   .welcome-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     gap: 3rem;

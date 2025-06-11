@@ -1,9 +1,9 @@
 .information-section {
-  padding: 2rem 0;
+  padding: 2rem 0 5rem 0;
 
   h2 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .information-content {

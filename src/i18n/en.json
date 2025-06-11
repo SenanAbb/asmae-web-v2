@@ -6,9 +6,9 @@
   "language_selector_french_label": "French",
 
   "navbar_home_label": "Home",
-  "navbar_about_label": "About",
+  "navbar_about_label": "Office",
   "navbar_contact_label": "Contact",
-  "navbar_expertises_label": "Expertises",
+  "navbar_expertises_label": "Services",
 
   "hero_subtitle": "Graduate",
 
@@ -47,10 +47,15 @@
 
   "contact_section_title": "Contact me",
   "contact_section_form_name_label": "Name",
+  "contact_section_form_lastname_label": "Lastname",
   "contact_section_form_email_label": "Email",
   "contact_section_form_phone_label": "Phone",
   "contact_section_form_message_label": "Message",
   "contact_section_form_button": "Send message",
+  "contact_section_form_button_loading": "Sending message...",
+  "contact_section_form_success": "Message sent successfully",
+  "contact_section_form_error": "Error sending message. Please try again later.",
+  "contact_section_form_error_too_many_requests": "Too many requests. Please try again later.",
 
   "footer_section_links_label": "Fast links",
   "footer_section_contact_label": "Contact",
@@ -58,5 +63,9 @@
   "footer_section_monday_friday_label": "M-F",
   "footer_section_saturday_label": "Saturday",
   "footer_section_sunday_label": "Sunday",
-  "footer_section_closed_label": "Closed"
+  "footer_section_closed_label": "Closed",
+
+  "cabinet_page_description_1": "A graduate of the Aliénor Law School in Bordeaux and holder of a Master's degree in European and international law, Maitre KIRIMOV advises, assists and defends you before all administrative jurisdictions as well as before the judicial courts.",
+  "cabinet_page_description_2": "Maître Kirimov also offers to defend your interests in the context of various daily life matters (disputes arising in the context of the purchase or sale of a movable or immovable property, neighbourhood disturbances, civil liability).",
+  "cabinet_page_description_3": "Thanks to her professional experience within law firms, the French administration or an administrative court, Maitre Kirimov offers her skills in advice and litigation in various areas of administrative law (law on foreigners and nationality, town planning law, civil service law, etc.)"
 }

@@ -3,16 +3,30 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import './HamburgerIcon.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export const HamburgerIcon = () => {
+  const { t } = useTranslation();
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const inputRef = useRef(null);
 
-  const { t } = useTranslation();
+  const handleClose = () => {
+    setOpen(false);
+    inputRef.current.checked = false;
+  };
 
   useEffect(() => {
+    if (!isHome) {
+      setScrolled(true); // fondo blanco al salir de home
+      return;
+    }
+
+    setScrolled(window.scrollY > 0);
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
     };
@@ -22,7 +36,7 @@ export const HamburgerIcon = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isHome]);
 
   const handleToggle = () => {
     setOpen(!open);
@@ -71,16 +85,24 @@ export const HamburgerIcon = () => {
             exit={{ opacity: 0, translateY: 20 }}
           >
             <li>
-              <Link to="#">{t('navbar_home_label')}</Link>
+              <Link to="/" onClick={handleClose}>
+                {t('navbar_home_label')}
+              </Link>
             </li>
             <li>
-              <Link to="#">{t('navbar_about_label')}</Link>
+              <Link to="/cabinet" onClick={handleClose}>
+                {t('navbar_about_label')}
+              </Link>
             </li>
             <li>
-              <Link to="#">{t('navbar_expertises_label')}</Link>
+              <Link to="/services" onClick={handleClose}>
+                {t('navbar_expertises_label')}
+              </Link>
             </li>
             <li>
-              <Link to="#">{t('navbar_contact_label')}</Link>
+              <Link to="/?scrollTo=contact" onClick={handleClose}>
+                {t('navbar_contact_label')}
+              </Link>
             </li>
           </motion.ul>
         )}

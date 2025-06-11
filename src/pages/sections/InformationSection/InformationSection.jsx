@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import './InformationSection.css';
 import { AiFillMail, AiFillPhone } from 'react-icons/ai';
 import { BsFillPinMapFill } from 'react-icons/bs';
+import { Separator } from '../../../components/Separator/Separator';
 
 export const InformationSection = () => {
   const { t } = useTranslation();
@@ -10,6 +11,7 @@ export const InformationSection = () => {
     <section className="information-section">
       <div className="container">
         <h2>{t('information_section_title')}</h2>
+        <Separator style={{ marginBottom: '2rem' }}/>
         <div className="information-content">
           <div className="map">
             <iframe

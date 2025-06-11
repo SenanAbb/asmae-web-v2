@@ -29,7 +29,7 @@ export const WelcomeSection = () => {
               onClick={() => {}}
             />
           </div>
-          <img src="/images/asmae-nobg.webp" alt="Asmae" loading='lazy'/>
+          <img src="/images/asmae-nobg.webp" alt="Asmae" loading="lazy" />
         </div>
       </div>
     </section>
