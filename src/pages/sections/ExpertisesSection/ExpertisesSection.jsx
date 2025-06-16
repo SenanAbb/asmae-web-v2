@@ -1,9 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from '../../../components/Button/Button';
 import './ExpertisesSection.css';
+import { useNavigate } from 'react-router-dom';
 
 export const ExpertisesSection = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const expertises = [
     {
@@ -31,7 +33,11 @@ export const ExpertisesSection = () => {
       <div className="container">
         <div className="expertises-container">
           {expertises.map((expertise, index) => (
-            <article key={index} className="expertise" onClick={() => {}}>
+            <article
+              key={index}
+              className="expertise"
+              onClick={() => navigate('/services')}
+            >
               <img src={expertise.image} alt="Expertise" loading="lazy" />
               <div className="overlay"></div>
               <div className="expertise-content">
@@ -42,7 +48,7 @@ export const ExpertisesSection = () => {
                   <Button
                     text={t('expertises_section_button')}
                     type="primary"
-                    onClick={() => {}}
+                    onClick={() => navigate('/services')}
                   />
                 </div>
               </div>
