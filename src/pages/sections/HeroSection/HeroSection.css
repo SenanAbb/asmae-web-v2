@@ -43,8 +43,8 @@
         font-size: 7rem;
         font-weight: bold;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        line-height: 7rem;
-        font-family: 'Italianno', 'Poppins', sans-serif;
+        line-height: 10rem;
+        font-family: 'Great Vibes', 'Poppins', sans-serif;
       }
 
       p {
@@ -53,7 +53,7 @@
         font-weight: bold;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         line-height: 2.4rem;
-        font-family: 'Italianno', 'Poppins', sans-serif;
+        font-family: 'Great Vibes', 'Poppins', sans-serif;
       }
 
       .social-links {

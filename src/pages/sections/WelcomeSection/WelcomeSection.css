@@ -47,29 +47,5 @@
     .name {
       color: var(--primary)
     }
-
-    .benefits {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 30px;
-
-      li {
-        margin-bottom: 10px;
-        font-size: 1rem;
-        color: var(--gray-text);
-        position: relative;
-        padding-left: 1.5em;
-        display: flex;
-        align-items: center;
-
-        &::before {
-          content: '✔';
-          position: absolute;
-          left: 0;
-          color: var(--primary);
-          font-size: 1rem;
-        }
-      }
-    }
   }
 }

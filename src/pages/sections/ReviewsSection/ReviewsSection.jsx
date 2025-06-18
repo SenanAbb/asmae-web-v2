@@ -40,7 +40,12 @@ export const ReviewsSection = () => {
           <Button
             text={t('reviews_section_button')}
             type="primary"
-            onClick={() => {}}
+            onClick={() =>
+              window.open(
+                "https://www.google.com/maps/place/Asmae+KIRIMOV/@43.2971682,-0.3741877,17z/data=!3m1!5s0xd5648d3b3a46b77:0x4eb3ef90b6f9c2b9!4m8!3m7!1s0xd5649a14ecc3449:0x639aef6cf383aa82!8m2!3d43.2971643!4d-0.3716128!9m1!1b1!16s%2Fg%2F11shfbly5b?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D",
+                '_blank'
+              )
+            }
             style={{
               borderRadius: '2rem',
               color: 'var(--white)',

@@ -1,21 +1,21 @@
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
-export default function DeveloppementStrategie() {
+export default function HarcelementMoral() {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  const backgroundImageUrl = '/images/developpement-strategie.webp';
+  const backgroundImageUrl = '/images/harcelement-moral.webp';
 
   return (
     <section className="service-section">
       <div
         className="hero-image"
         style={{ backgroundImage: `url(${backgroundImageUrl})` }}
-        aria-label={t('services_page_subfamily_1_1')}
+        aria-label={t('services_page_subfamily_3_2')}
       >
         <div className="hero-overlay" />
-        <h1 className="hero-title">{t('services_page_subfamily_1_1')}</h1>
+        <h1 className="hero-title">{t('services_page_subfamily_3_2')}</h1>
       </div>
 
       <div className="container">
@@ -36,29 +36,26 @@ export default function DeveloppementStrategie() {
         </nav>
 
         <h2 className="service-subtitle">
-          {t('services_page_subfamily_1_1_title')}
+          {t('services_page_subfamily_3_2_title')}
         </h2>
         <p className="service-intro">
-          {t('services_page_subfamily_1_1_subtitle')}
+          {t('services_page_subfamily_3_2_subtitle')}
         </p>
 
         <ul className="service-list">
-          {[1, 2, 3, 4, 5].map((num) => (
+          {[1, 2, 3].map((num) => (
             <li key={num}>
               <strong>
-                {t(`services_page_subfamily_1_1_list_${num}_title`)}
+                {t(`services_page_subfamily_3_2_list_${num}_title`)}
               </strong>
-              {t(`services_page_subfamily_1_1_list_${num}_description`)}
+              {t(`services_page_subfamily_3_2_list_${num}_description`)}
             </li>
           ))}
         </ul>
 
         <h2 className="service-conclusion-title">
-          {t('services_page_subfamily_1_1_footer_title')}
+          {t('services_page_subfamily_3_2_footer_title')}
         </h2>
-        <p className="service-conclusion-text">
-          {t('services_page_subfamily_1_1_footer_description')}
-        </p>
       </div>
     </section>
   );

@@ -1,39 +1,63 @@
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 export default function AcquisitionsCessions() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const backgroundImageUrl = '/images/acquisitions-cessions.webp';
 
   return (
     <section className="service-section">
+      <div
+        className="hero-image"
+        style={{ backgroundImage: `url(${backgroundImageUrl})` }}
+        aria-label={t('services_page_subfamily_1_2')}
+      >
+        <div className="hero-overlay" />
+        <h1 className="hero-title">{t('services_page_subfamily_1_2')}</h1>
+      </div>
+
       <div className="container">
-        <h1 className="service-title">{t('services_page_subfamily_1_2')}</h1>
+        <nav className="nav-buttons">
+          <button
+            className="back-button"
+            onClick={() => navigate('/services')}
+            aria-label={t('back_to_services')}
+          >
+            ← {t('back_to_services')}
+          </button>
+          <button
+            className="contact-button"
+            onClick={() => navigate('/?scrollTo=contact')}
+          >
+            {t('contact_section_title')}
+          </button>
+        </nav>
+
         <h2 className="service-subtitle">
-          {t('services_page_subfamily_1_title')}
+          {t('services_page_subfamily_1_2_title')}
         </h2>
-        <h3 className="service-intro">
-          {t('services_page_subfamily_2_subtitle')}
-        </h3>
+        <p className="service-intro">
+          {t('services_page_subfamily_1_2_subtitle')}
+        </p>
 
         <ul className="service-list">
-          <li>
-            <strong>{t('services_page_subfamily_2_list_1_title')}</strong>
-            {t('services_page_subfamily_2_list_1_description')}
-          </li>
-          <li>
-            <strong>{t('services_page_subfamily_2_list_2_title')}</strong>
-            {t('services_page_subfamily_2_list_2_description')}
-          </li>
-          <li>
-            <strong>{t('services_page_subfamily_2_list_3_title')}</strong>
-            {t('services_page_subfamily_2_list_3_description')}
-          </li>
+          {[1, 2, 3].map((num) => (
+            <li key={num}>
+              <strong>
+                {t(`services_page_subfamily_1_2_list_${num}_title`)}
+              </strong>
+              {t(`services_page_subfamily_1_2_list_${num}_description`)}
+            </li>
+          ))}
         </ul>
 
         <h2 className="service-conclusion-title">
-          {t('services_page_subfamily_2_footer_title')}
+          {t('services_page_subfamily_1_2_footer_title')}
         </h2>
         <p className="service-conclusion-text">
-          {t('services_page_subfamily_2_footer_description')}
+          {t('services_page_subfamily_1_2_footer_description')}
         </p>
       </div>
     </section>
