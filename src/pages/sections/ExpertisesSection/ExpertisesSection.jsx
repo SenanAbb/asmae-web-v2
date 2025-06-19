@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '../../../components/Button/Button';
 import './ExpertisesSection.css';
 import { useNavigate } from 'react-router-dom';
+import CardSlider from '../../../components/CardSlider/CardSlider';
 
 export const ExpertisesSection = () => {
   const { t } = useTranslation();
@@ -55,6 +56,19 @@ export const ExpertisesSection = () => {
             </article>
           ))}
         </div>
+        <CardSlider
+          slides={expertises.map((expertise) => ({
+            ...expertise,
+            onClick: () => navigate('/services'),
+            button: (
+              <Button
+                text={t('expertises_section_button')}
+                type="primary"
+                onClick={() => navigate('/services')}
+              />
+            ),
+          }))}
+        />
       </div>
     </section>
   );
