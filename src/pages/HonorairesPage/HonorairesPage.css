@@ -1,0 +1,29 @@
+.honoraires-page {
+  margin: 12dvh 0 5dvh 0;
+
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-dark);
+  }
+
+  .honoraires-section {
+    margin-bottom: 2rem;
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-left: 4px solid var(--secondary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    .section-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .section-content {
+      font-size: 1rem;
+      color: var(--gray-text);
+    }
+  }
+}

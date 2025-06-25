@@ -58,6 +58,9 @@ export default function Navbar() {
           <li>
             <Link to={'/?scrollTo=contact'}>{t('navbar_contact_label')}</Link>
           </li>
+          <li>
+            <Link to="/honoraires">{t('navbar_honoraires_label')}</Link>
+          </li>
         </ul>
         <div className="right">
           <LanguageSelector />

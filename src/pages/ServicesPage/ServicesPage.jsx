@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const servicesData = [
   {
     familyKey: 'services_page_family_1',
+    familyDesc: 'services_page_family_1_description',
     links: [
       {
         to: '/services/developpement-strategie',
@@ -26,6 +27,7 @@ const servicesData = [
   },
   {
     familyKey: 'services_page_family_2',
+    familyDesc: 'services_page_family_2_description',
     links: [
       { to: '/services/visa', labelKey: 'services_page_subfamily_2_1' },
       {
@@ -38,6 +40,7 @@ const servicesData = [
   },
   {
     familyKey: 'services_page_family_3',
+    familyDesc: 'services_page_family_3_description',
     links: [
       {
         to: '/services/procedure-disciplinaire',
@@ -68,18 +71,21 @@ export default function ServicesPage() {
         <h1>{t('services_page_title')}</h1>
         <p className="services-description">{t('services_page_description')}</p>
 
-        {servicesData.map(({ familyKey, links }) => (
+        {servicesData.map(({ familyKey, familyDesc, links }) => (
           <div className="services-group" key={familyKey}>
             <h2 className="services-family">{t(familyKey)}</h2>
-            <ul className="services-list">
-              {links.map(({ to, labelKey }) => (
-                <li key={to}>
-                  <Link className="service-link" to={to}>
-                    {t(labelKey)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div className="services-content">
+              <p className="family-description">{t(familyDesc)}</p>
+              <ul className="services-list">
+                {links.map(({ to, labelKey }) => (
+                  <li key={to}>
+                    <Link className="service-link" to={to}>
+                      {t(labelKey)}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         ))}
       </div>

@@ -6,6 +6,7 @@ import { HeroSection } from '../sections/HeroSection/HeroSection';
 import { InformationSection } from '../sections/InformationSection/InformationSection';
 import { ReviewsSection } from '../sections/ReviewsSection/ReviewsSection';
 import { WelcomeSection } from '../sections/WelcomeSection/WelcomeSection';
+import { AdvantagesSection } from '../sections/AdvantagesSection/AdvantagesSection';
 
 export default function Home() {
   const location = useLocation();
@@ -28,6 +29,7 @@ export default function Home() {
       <HeroSection />
       <WelcomeSection />
       <ExpertisesSection />
+      <AdvantagesSection />
       <InformationSection />
       <ReviewsSection />
       <ContactSection />

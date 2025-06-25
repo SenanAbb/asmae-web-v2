@@ -31,71 +31,101 @@
       border-bottom: 2px solid var(--primary-extra-light);
     }
 
-    .services-list {
-      list-style: none;
-      padding: 0;
-      margin-top: 1rem;
+    /* Aquí creamos dos columnas */
+    .services-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: flex-start;
 
-      li {
-        margin-bottom: 1rem;
+      /* Para que el texto quede a la izquierda y links a la derecha */
+      .family-description {
+        font-size: 1rem;
+        color: var(--gray-text);
+        line-height: 1.8rem;
+        max-width: 90%;
+        margin: 0; /* evita márgenes inesperados */
+      }
 
-        .service-link {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0.85rem 1rem;
-          font-size: 1.1rem;
-          color: var(--black);
-          background-color: var(--gray);
-          border-radius: 8px;
-          text-decoration: none;
-          transition: background 0.3s, color 0.3s;
+      .services-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
 
-          &::after {
-            content: '→';
-            font-size: 1rem;
-            color: var(--secondary-dark);
-            transition: transform 0.3s ease;
-          }
+        li {
+          margin: 0;
 
-          &:hover {
-            background-color: var(--primary-extra-light);
-            color: var(--primary);
+          .service-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.85rem 1rem;
+            font-size: 1.1rem;
+            color: var(--black);
+            background-color: var(--gray);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s;
 
             &::after {
-              transform: translateX(6px);
+              content: '→';
+              font-size: 1rem;
+              color: var(--secondary-dark);
+              transition: transform 0.3s ease;
+            }
+
+            &:hover {
+              background-color: var(--primary-extra-light);
               color: var(--primary);
+
+              &::after {
+                transform: translateX(6px);
+                color: var(--primary);
+              }
             }
           }
         }
       }
     }
 
-    .services-family > .service-link {
-      display: inline-flex;
-      align-items: center;
-      font-size: 1.5rem;
-      text-decoration: none;
-      color: var(--primary);
-      position: relative;
-      padding-right: 1.2rem;
-      transition: color 0.3s;
-
-      &::after {
-        content: '→';
-        margin-left: 0.5rem;
-        font-size: 1.2rem;
-        color: var(--secondary);
-        transition: transform 0.3s;
+    /* Responsive: En pantallas pequeñas, pasar a una sola columna */
+    @media (max-width: 768px) {
+      .services-family {
+        font-size: 1.4rem;
       }
 
-      &:hover {
-        color: var(--secondary-dark);
+      .services-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
 
-        &::after {
-          transform: translateX(6px);
-          color: var(--primary);
+        .family-description {
+          max-width: 100%;
+          font-size: 0.95rem;
+          line-height: 1.6rem;
         }
+
+        .services-list {
+          .service-link {
+            font-size: 1rem;
+            padding: 0.7rem 1rem;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+      .services-content {
+        .service-link {
+          font-size: 0.9rem;
+          padding: 0.6rem 0.85rem;
+        }
+      }
+
+      .services-family {
+        font-size: 1.25rem;
       }
     }
   }

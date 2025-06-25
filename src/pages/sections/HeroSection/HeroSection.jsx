@@ -1,10 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import {
-  AiFillFacebook,
-  AiFillInstagram,
-  AiFillLinkedin,
-  AiFillMail,
-} from 'react-icons/ai';
+import { AiFillLinkedin, AiFillMail, AiFillPhone } from 'react-icons/ai';
 
 import './HeroSection.css';
 import { Link } from 'react-router-dom';
@@ -20,23 +15,19 @@ export const HeroSection = () => {
       <div className="black-overlay"></div>
       <div className="content">
         <div className="title">
-          <p>{t('hero_subtitle')}</p>
-          <h1>Asmae Kirimov</h1>
+          <h1>
+            <span>{t('hero_subtitle')}</span> Asmae Kirimov
+          </h1>
           <div className="separator"></div>
           <div className="social-links">
-            <Link to="https://www.facebook.com/" target="_blank">
-              <AiFillFacebook size={40} />
-            </Link>
-            <Link to="https://www.instagram.com/" target="_blank">
-              <AiFillInstagram size={40} />
-            </Link>
             <Link to="https://www.linkedin.com/" target="_blank">
               <AiFillLinkedin size={40} />
             </Link>
-
-            {/* !! TO CHANGE EMAIL */}
-            <Link to="mailto:asmae@example.com" target="_blank">
+            <Link to="mailto:asmaekirimov.avocat@gmail.com" target="_blank">
               <AiFillMail size={40} />
+            </Link>
+            <Link to="tel:+33 6 41 22 81 53" target="_blank">
+              <AiFillPhone size={40} />
             </Link>
 
             <a href="mailto:asmae@example.com">

@@ -8,14 +8,16 @@
   "navbar_home_label": "Home",
   "navbar_about_label": "Office",
   "navbar_contact_label": "Contact",
-  "navbar_expertises_label": "Services",
+  "navbar_expertises_label": "Legal expertises",
+  "navbar_honoraires_label": "Fees",
 
   "hero_subtitle": "Graduate",
 
   "welcome_section_title": "Welcome to the law office of ",
   "welcome_section_subtitle": "Your trusted legal partner in France",
   "welcome_section_description_1": "As a lawyer in Pau, I advise, assist and represent you in the fields of administrative law, international business law and everyday disputes. Drawing on my experience within law firms, the French administration and an administrative court, I founded my own practice to offer you rigorous, human and tailor-made support.",
-  "welcome_section_description_2": "Holder of a Master's degree in European and international law, I appear before all administrative and judicial courts. I put my skills in immigration law, nationality law, urban planning law, civil service law, as well as civil liability and personal injury at your service. Based in Pau, I also offer support tailored to companies in the context of their international activities, in business and corporate law.",
+  "welcome_section_description_2": "Holder of a Master's degree in European and international law, I appear before all administrative and judicial courts. I put my skills in immigration law, nationality law, urban planning law, civil service law, as well as civil liability and personal injury at your service.",
+  "welcome_section_description_3": "Based in Pau, I also offer tailored support to companies in the context of their international activities, in business and corporate law.",
   "welcome_section_button": "Make an appointment",
 
   "expertises_section_title_1": "Business",
@@ -35,7 +37,18 @@
   "expertises_section_description_4": "Expert and humane representation for compensation claims.",
   "expertises_section_button": "Learn more",
 
-  "information_section_title": "Where to find me",
+  "advantages_section_title": "Cabinet strengths",
+  "advantages_section_subtitle": "Many values drive Maître Kirimov, whether it be humanity, determination, or transparency. Maître Kirimov will strive to meet the goals you present to her.",
+  "advantages_section_item_1_title": "Equality",
+  "advantages_section_item_1_description": "Fully aware that each case represents a major issue for the client, Maître Kirimov is committed to giving equal and identical importance to each one of her cases.",
+  "advantages_section_item_2_title": "Personalized approach",
+  "advantages_section_item_2_description": "In order to provide support tailored to your expectations and to build your legal strategy together, Maître Kirimov personally handles her cases.",
+  "advantages_section_item_3_title": "Transparency",
+  "advantages_section_item_3_description": "Maître Kirimov considers it a matter of principle that you are able to assess the risks, especially financial, your case may involve and decide with full knowledge how to defend your rights and interests.",
+  "advantages_section_item_4_title": "Responsiveness",
+  "advantages_section_item_4_description": "Maître Kirimov strives to find the right balance for the client between responsiveness, availability, and high-quality case management.",
+
+  "information_section_title": "Office address",
   "information_section_address_title": "Address",
   "information_section_phone_title": "Phone",
   "information_section_email_title": "Email",

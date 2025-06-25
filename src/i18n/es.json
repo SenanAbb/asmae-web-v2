@@ -8,14 +8,16 @@
   "navbar_home_label": "Inicio",
   "navbar_about_label": "Despacho",
   "navbar_contact_label": "Contacto",
-  "navbar_expertises_label": "Servicios",
+  "navbar_expertises_label": "Conocimientos jurídicos",
+  "navbar_honoraires_label": "Honorarios",
 
   "hero_subtitle": "Graduada",
 
   "welcome_section_title": "Bienvenido al despacho de abogados de ",
   "welcome_section_subtitle": "Su socio jurídico de confianza en Francia",
   "welcome_section_description_1": "Como abogada en Pau, le aconsejo, asisto y represento en los ámbitos del derecho administrativo, derecho de los negocios internacionales y litigios cotidianos. Con base en mi experiencia en despachos de abogados, la administración francesa y un tribunal administrativo, fundé mi propia estructura para ofrecerle un acompañamiento riguroso, humano y a medida.",
-  "welcome_section_description_2": "Titulada con un Máster en derecho europeo e internacional, intervengo ante todos los tribunales administrativos y judiciales. Pongo a su servicio mis competencias en derecho de extranjería, derecho de la nacionalidad, derecho urbanístico, derecho de la función pública, así como en responsabilidad civil y daños corporales. Establecida en Pau, también ofrezco acompañamiento adaptado a las empresas en el marco de sus actividades internacionales, en derecho de los negocios y de las sociedades.",
+  "welcome_section_description_2": "Titulada con un Máster en derecho europeo e internacional, intervengo ante todos los tribunales administrativos y judiciales. Pongo a su servicio mis competencias en derecho de extranjería, derecho de la nacionalidad, derecho urbanístico, derecho de la función pública, así como en responsabilidad civil y daños corporales.",
+  "welcome_section_description_3": "Establecida en Pau, también ofrezco un acompañamiento adaptado a las empresas en el marco de sus actividades internacionales, en derecho mercantil y societario.",
   "welcome_section_button": "Pedir cita",
 
   "expertises_section_title_1": "Negocios",
@@ -35,7 +37,18 @@
   "expertises_section_description_4": "Representación experta y humana para solicitudes de indemnización.",
   "expertises_section_button": "Saber más",
 
-  "information_section_title": "Dónde encontrarme",
+  "advantages_section_title": "Puntos fuertes del gabinete",
+  "advantages_section_subtitle": "Muchos valores impulsan a la licenciada Kirimov, ya sea la humanidad, la determinación o la transparencia, la licenciada Kirimov se esforzará por estar a la altura de los objetivos que usted le presente.",
+  "advantages_section_item_1_title": "Igualdad",
+  "advantages_section_item_1_description": "Siendo plenamente consciente de que cada expediente representa un gran desafío para el cliente, la licenciada Kirimov se preocupa por dar la misma e idéntica importancia a cada uno de sus casos.",
+  "advantages_section_item_2_title": "Atención personalizada",
+  "advantages_section_item_2_description": "Con el fin de ofrecerle un acompañamiento adaptado a sus expectativas y construir juntos su estrategia jurídica, la licenciada Kirimov gestiona personalmente sus expedientes.",
+  "advantages_section_item_3_title": "Transparencia",
+  "advantages_section_item_3_description": "La licenciada Kirimov considera esencial que usted pueda evaluar los riesgos, en especial financieros, a los que le expone su caso, y decidir con pleno conocimiento de causa cómo defender sus derechos e intereses.",
+  "advantages_section_item_4_title": "Reactividad",
+  "advantages_section_item_4_description": "La licenciada Kirimov se esfuerza por encontrar un equilibrio indispensable para el cliente entre reactividad, disponibilidad y tratamiento cualitativo del expediente.",
+
+  "information_section_title": "Dirección y contacto",
   "information_section_address_title": "Dirección",
   "information_section_phone_title": "Teléfono",
   "information_section_email_title": "Correo electrónico",

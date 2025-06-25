@@ -17,6 +17,7 @@ export const WelcomeSection = () => {
             <h3>{t('welcome_section_subtitle')}</h3>
             <p>{t('welcome_section_description_1')}</p>
             <p>{t('welcome_section_description_2')}</p>
+            <p>{t('welcome_section_description_3')}</p>
 
             <Button
               text={t('welcome_section_button')}

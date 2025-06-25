@@ -104,6 +104,9 @@ export const HamburgerIcon = () => {
                 {t('navbar_contact_label')}
               </Link>
             </li>
+            <li>
+              <Link to="/honoraires">{t('navbar_honoraires_label')}</Link>
+            </li>
           </motion.ul>
         )}
       </AnimatePresence>

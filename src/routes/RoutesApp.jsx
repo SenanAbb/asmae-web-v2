@@ -16,6 +16,7 @@ import TitresSejourOQTF from '../pages/TitresSejourOQTF/TitresSejourOQTF';
 import ProceduresDisciplinaires from '../pages/ProceduresDisciplinaires/ProceduresDisciplinaires';
 import HarcelementMoral from '../pages/HarcelementMoral/HarcelementMoral';
 import MaladieProfessionnelleAccident from '../pages/MaladieProfessionnelleAccident/MaladieProfessionnelleAccident';
+import HonorairesPage from '../pages/HonorairesPage/HonorairesPage';
 
 export default function RoutesApp() {
   return (
@@ -30,6 +31,7 @@ export default function RoutesApp() {
           <Route path="/" element={<HomePage />} />
           <Route path="/cabinet" element={<CabinetPage />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/honoraires" element={<HonorairesPage />} />
 
           {/* Services routes */}
           {/* Affaires & Societes*/}

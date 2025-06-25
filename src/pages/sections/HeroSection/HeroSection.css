@@ -47,9 +47,8 @@
         font-family: 'Great Vibes', 'Poppins', sans-serif;
       }
 
-      p {
+      span {
         color: var(--primary-light);
-        font-size: 4rem;
         font-weight: bold;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         line-height: 2.4rem;
