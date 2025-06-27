@@ -5,6 +5,7 @@ import './ContactSection.css';
 
 export const ContactSection = () => {
   const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: '',
     lastname: '',
@@ -32,6 +33,7 @@ export const ContactSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!isFormValid) return;
 
     setSending(true);
@@ -91,101 +93,155 @@ export const ContactSection = () => {
   return (
     <section className="contact-section" id="contact">
       <div className="container">
-        <div className="flex">
-          <form onSubmit={handleSubmit}>
-            <h2>{t('contact_section_title')}</h2>
+        <div className="contact-wrapper">
+          {/* Decorative Elements */}
+          <div className="decorative-elements">
+            <div className="decoration-circle circle-1"></div>
+            <div className="decoration-circle circle-2"></div>
+            <div className="decoration-circle circle-3"></div>
+          </div>
 
-            <div className="field-group">
-              <div className="group">
-                <label htmlFor="name">
-                  {t('contact_section_form_name_label')} <span>*</span>
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  autoComplete="name"
-                />
-              </div>
-
-              <div className="group">
-                <label htmlFor="lastname">
-                  {t('contact_section_form_lastname_label')} <span>*</span>
-                </label>
-                <input
-                  type="text"
-                  name="lastname"
-                  id="lastname"
-                  value={formData.lastname}
-                  onChange={handleChange}
-                  autoComplete="family-name"
-                />
-              </div>
+          <div className="form-container">
+            <div className="form-header">
+              <h2 className="form-title">{t('contact_section_title')}</h2>
+              <p className="form-subtitle">{t('contact_section_subtitle')}</p>
             </div>
 
-            <div className="field-group">
-              <div className="group">
-                <label htmlFor="phone">
-                  {t('contact_section_form_phone_label')} <span>*</span>
-                </label>
-                <input
-                  type="tel"
-                  name="phone"
-                  id="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  autoComplete="tel"
-                />
+            <form onSubmit={handleSubmit} className="contact-form">
+              <div className="field-group">
+                <div className="input-group">
+                  <label htmlFor="name" className="input-label">
+                    {t('contact_section_form_name_label')}{' '}
+                    <span className="required">*</span>
+                  </label>
+                  <div className="input-wrapper">
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      autoComplete="name"
+                      className="form-input"
+                      placeholder={t('contact_section_form_name_placeholder')}
+                    />
+                    <div className="input-border"></div>
+                  </div>
+                </div>
+
+                <div className="input-group">
+                  <label htmlFor="lastname" className="input-label">
+                    {t('contact_section_form_lastname_label')}{' '}
+                    <span className="required">*</span>
+                  </label>
+                  <div className="input-wrapper">
+                    <input
+                      type="text"
+                      name="lastname"
+                      id="lastname"
+                      value={formData.lastname}
+                      onChange={handleChange}
+                      autoComplete="family-name"
+                      className="form-input"
+                      placeholder={t('contact_section_form_lastname_placeholder')}
+                    />
+                    <div className="input-border"></div>
+                  </div>
+                </div>
               </div>
 
-              <div className="group">
-                <label htmlFor="email">
-                  {t('contact_section_form_email_label')} <span>*</span>
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  autoComplete="email"
-                />
+              <div className="field-group">
+                <div className="input-group">
+                  <label htmlFor="phone" className="input-label">
+                    {t('contact_section_form_phone_label')}{' '}
+                    <span className="required">*</span>
+                  </label>
+                  <div className="input-wrapper">
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      autoComplete="tel"
+                      className="form-input"
+                      placeholder="+33 6 12 34 56 78"
+                    />
+                    <div className="input-border"></div>
+                  </div>
+                </div>
+
+                <div className="input-group">
+                  <label htmlFor="email" className="input-label">
+                    {t('contact_section_form_email_label')}{' '}
+                    <span className="required">*</span>
+                  </label>
+                  <div className="input-wrapper">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      autoComplete="email"
+                      className="form-input"
+                      placeholder={t('contact_section_form_email_placeholder')}
+                    />
+                    <div className="input-border"></div>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <div className="group">
-              <label htmlFor="message">
-                {t('contact_section_form_message_label')} <span>*</span>
-              </label>
-              <textarea
-                name="message"
-                id="message"
-                rows="5"
-                value={formData.message}
-                onChange={handleChange}
-              ></textarea>
-            </div>
+              <div className="input-group full-width">
+                <label htmlFor="message" className="input-label">
+                  {t('contact_section_form_message_label')}{' '}
+                  <span className="required">*</span>
+                </label>
+                <div className="input-wrapper">
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="5"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="form-textarea"
+                    placeholder={t('contact_section_form_message_placeholder')}
+                  ></textarea>
+                  <div className="input-border"></div>
+                </div>
+              </div>
 
-            <Button
-              text={
-                sending
-                  ? t('contact_section_form_button_loading')
-                  : t('contact_section_form_button')
-              }
-              type="primary"
-              disabled={!isFormValid || sending}
-            />
+              <div className="form-actions">
+                <Button
+                  text={
+                    sending
+                      ? t('contact_section_form_button_loading')
+                      : t('contact_section_form_button')
+                  }
+                  type="primary"
+                  disabled={!isFormValid || sending}
+                  className={`submit-button ${sending ? 'loading' : ''}`}
+                />
 
-            {error && <p style={{ color: 'red' }}>{error}</p>}
+                {/* Status Messages */}
+                <div className="status-messages">
+                  {error && (
+                    <div className="status-message error-message">
+                      <div className="message-icon">⚠️</div>
+                      <p>{error}</p>
+                    </div>
+                  )}
 
-            {sent && (
-              <p style={{ color: 'green' }}>
-                {t('contact_section_form_success')}
-              </p>
-            )}
-          </form>
+                  {sent && (
+                    <div className="status-message success-message">
+                      <div className="message-icon">✅</div>
+                      <p>{t('contact_section_form_success')}</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>

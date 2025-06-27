@@ -95,7 +95,7 @@ export const HamburgerIcon = () => {
               </Link>
             </li>
             <li>
-              <Link to="/services" onClick={handleClose}>
+              <Link to="/expertises" onClick={handleClose}>
                 {t('navbar_expertises_label')}
               </Link>
             </li>

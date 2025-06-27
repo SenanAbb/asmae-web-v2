@@ -53,7 +53,7 @@ export default function Navbar() {
             <Link to="/cabinet">{t('navbar_about_label')}</Link>
           </li>
           <li>
-            <Link to="/services">{t('navbar_expertises_label')}</Link>
+            <Link to="/expertises">{t('navbar_expertises_label')}</Link>
           </li>
           <li>
             <Link to={'/?scrollTo=contact'}>{t('navbar_contact_label')}</Link>

@@ -30,51 +30,51 @@ export default function RoutesApp() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/cabinet" element={<CabinetPage />} />
-          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/expertises" element={<ServicesPage />} />
           <Route path="/honoraires" element={<HonorairesPage />} />
 
           {/* Services routes */}
           {/* Affaires & Societes*/}
           <Route
-            path="/services/developpement-strategie"
+            path="/expertises/developpement-strategie"
             element={<DeveloppementStrategie />}
           />
           <Route
-            path="/services/acquisitions-cessions"
+            path="/expertises/acquisitions-cessions"
             element={<AcquisitionsCessions />}
           />
           <Route
-            path="/services/droit-commercial"
+            path="/expertises/droit-commercial"
             element={<DroitCommercial />}
           />
           <Route
-            path="/services/droit-fiscal-patrimonial"
+            path="/expertises/droit-fiscal-patrimonial"
             element={<DroitFiscalPatrimonial />}
           />
 
           {/* Etrangers */}
-          <Route path="/services/visa" element={<VisasEtRefusDeVisa />} />
+          <Route path="/expertises/visa" element={<VisasEtRefusDeVisa />} />
           <Route
-            path="/services/regroupement-familial"
+            path="/expertises/regroupement-familial"
             element={<RegroupementFamilial />}
           />
           <Route
-            path="/services/asile-CNDA"
+            path="/expertises/asile-CNDA"
             element={<DemandeAsileRecoursCNDA />}
           />
-          <Route path="/services/sejour-OQTF" element={<TitresSejourOQTF />} />
+          <Route path="/expertises/sejour-OQTF" element={<TitresSejourOQTF />} />
 
           {/* Fonction publique */}
           <Route
-            path="/services/procedure-disciplinaire"
+            path="/expertises/procedure-disciplinaire"
             element={<ProceduresDisciplinaires />}
           />
           <Route
-            path="/services/harcelement-moral"
+            path="/expertises/harcelement-moral"
             element={<HarcelementMoral />}
           />
           <Route
-            path="/services/maladie-accident"
+            path="/expertises/maladie-accident"
             element={<MaladieProfessionnelleAccident />}
           />
 

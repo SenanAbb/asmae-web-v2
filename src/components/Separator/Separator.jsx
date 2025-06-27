@@ -1,13 +1,13 @@
 export const Separator = ({ style }) => {
   const baseStyle = {
-    width: '15rem',
+    width: 'min(100%, 40rem)',
     margin: '0 auto',
     display: 'block',
   };
 
   return (
     <img
-      src="/icons/separator3.svg"
+      src="/icons/separator4.svg"
       alt=""
       style={{ ...baseStyle, ...style }}
     />

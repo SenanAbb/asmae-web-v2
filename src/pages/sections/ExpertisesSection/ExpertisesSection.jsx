@@ -1,12 +1,18 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+// eslint-disable-next-line no-unused-vars
+import { motion, AnimatePresence } from 'framer-motion';
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import { Button } from '../../../components/Button/Button';
 import './ExpertisesSection.css';
-import { useNavigate } from 'react-router-dom';
-import CardSlider from '../../../components/CardSlider/CardSlider';
 
 export const ExpertisesSection = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const expertises = [
     {
@@ -29,46 +35,174 @@ export const ExpertisesSection = () => {
     },
   ];
 
+  // Auto-play functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % expertises.length);
+    }, 8000);
+
+    return () => clearInterval(interval);
+  }, [expertises.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % expertises.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide(
+      (prev) => (prev - 1 + expertises.length) % expertises.length
+    );
+  };
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const handleExpertiseClick = () => {
+    navigate('/services');
+  };
+
+  // Animation variants
+  const textVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut',
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: -30,
+      transition: {
+        duration: 0.5,
+        ease: 'easeIn',
+      },
+    },
+  };
+
+  const staggerContainer = {
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   return (
     <section className="expertises-section">
-      <div className="container">
-        <div className="expertises-container">
-          {expertises.map((expertise, index) => (
-            <article
-              key={index}
-              className="expertise"
-              onClick={() => navigate('/services')}
-            >
-              <img src={expertise.image} alt="Expertise" loading="lazy" />
-              <div className="overlay"></div>
-              <div className="expertise-content">
-                <h2>{expertise.title}</h2>
-                <div className="hide-content">
-                  <h3>{expertise.subtitle}</h3>
-                  <p>{expertise.description}</p>
+      {/* Carousel Container - Full Width */}
+      <div className="carousel-container">
+        {/* Background Images */}
+        <div className="background-images">
+          <AnimatePresence>
+            {expertises.map(
+              (expertise, index) =>
+                index === currentSlide && (
+                  <motion.div
+                    key={`${index}-${currentSlide}`}
+                    className="background-image"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.8, ease: 'easeInOut' }}
+                    style={{
+                      backgroundImage: `url(${expertise.image})`,
+                    }}
+                  >
+                    <div className="image-overlay"></div>
+                  </motion.div>
+                )
+            )}
+          </AnimatePresence>
+        </div>
+
+        {/* Content */}
+        <div className="carousel-content">
+          <div className="container">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentSlide}
+                className="slide-content"
+                variants={staggerContainer}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              >
+                <motion.h2 className="slide-title" variants={textVariants}>
+                  {expertises[currentSlide].title}
+                </motion.h2>
+
+                <motion.h3 className="slide-subtitle" variants={textVariants}>
+                  {expertises[currentSlide].subtitle}
+                </motion.h3>
+
+                <motion.p className="slide-description" variants={textVariants}>
+                  {expertises[currentSlide].description}
+                </motion.p>
+
+                <motion.div className="slide-button" variants={textVariants}>
                   <Button
                     text={t('expertises_section_button')}
-                    type="primary"
-                    onClick={() => navigate('/services')}
+                    type="secondary"
+                    onClick={handleExpertiseClick}
+                    className="expertise-button"
                   />
-                </div>
-              </div>
-            </article>
-          ))}
+                </motion.div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
-        <CardSlider
-          slides={expertises.map((expertise) => ({
-            ...expertise,
-            onClick: () => navigate('/services'),
-            button: (
-              <Button
-                text={t('expertises_section_button')}
-                type="primary"
-                onClick={() => navigate('/services')}
-              />
-            ),
-          }))}
-        />
+
+        {/* Bottom Controls */}
+        <div className="bottom-controls">
+          {/* Navigation Controls */}
+          <button
+            className="nav-button prev-button"
+            onClick={prevSlide}
+            aria-label="Anterior"
+          >
+            <AiOutlineLeft size={20} />
+          </button>
+
+          {/* Progress Indicators */}
+          <div className="carousel-indicators">
+            {expertises.map((_, index) => (
+              <button
+                key={index}
+                className={`indicator ${
+                  index === currentSlide ? 'active' : ''
+                }`}
+                onClick={() => goToSlide(index)}
+                aria-label={`Ir a slide ${index + 1}`}
+              >
+                <div className="indicator-progress">
+                  {index === currentSlide && (
+                    <motion.div
+                      className="progress-bar"
+                      initial={{ width: '0%' }}
+                      animate={{ width: '100%' }}
+                      transition={{ duration: 8, ease: 'linear' }}
+                    />
+                  )}
+                </div>
+              </button>
+            ))}
+          </div>
+
+          <button
+            className="nav-button next-button"
+            onClick={nextSlide}
+            aria-label="Siguiente"
+          >
+            <AiOutlineRight size={20} />
+          </button>
+        </div>
       </div>
     </section>
   );
