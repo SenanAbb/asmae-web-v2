@@ -1,70 +1,218 @@
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+// eslint-disable-next-line no-unused-vars
+import { motion, useInView } from 'framer-motion';
+import { AiOutlineGlobal, AiOutlineUser, AiOutlineHeart } from 'react-icons/ai';
 import './CabinetPage.css';
 
 export default function CabinetPage() {
   const { t } = useTranslation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const slideInLeftVariants = {
+    hidden: {
+      opacity: 0,
+      x: -50,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut',
+      },
+    },
+  };
+
+  const slideInRightVariants = {
+    hidden: {
+      opacity: 0,
+      x: 50,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut',
+      },
+    },
+  };
+
+  const fadeInUpVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut',
+      },
+    },
+  };
+
+  const infoBlocks = [
+    {
+      icon: AiOutlineGlobal,
+      title: t('cabinet_page_formation_title'),
+      description: t('cabinet_page_formation_description'),
+    },
+    {
+      icon: AiOutlineUser,
+      title: t('cabinet_page_experience_title'),
+      description: t('cabinet_page_experience_description'),
+    },
+    {
+      icon: AiOutlineHeart,
+      title: t('cabinet_page_structure_title'),
+      description: t('cabinet_page_structure_description'),
+    },
+  ];
 
   return (
-    <section className="cabinet-page">
+    <section className="cabinet-page" ref={ref}>
+      {/* Background Elements */}
+      <div className="background-elements">
+        <div className="bg-circle circle-1"></div>
+        <div className="bg-circle circle-2"></div>
+        <div className="bg-circle circle-3"></div>
+        <div className="bg-pattern"></div>
+      </div>
+
       <div className="container">
-        <div className="flex">
-          <div className="left">
-            <h1>
-              <span>{t('hero_subtitle')}</span> {t('name')}
-            </h1>
-            <div className="description">
-              <p>{t('cabinet_page_description_1')}</p>
-              <p>{t('cabinet_page_description_2')}</p>
-              <p>{t('cabinet_page_description_3')}</p>
+        {/* Hero Section */}
+        <motion.div
+          className="hero-section"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
+        >
+          <motion.div className="hero-content" variants={slideInLeftVariants}>
+            <div className="hero-header">
+              <h1 className="hero-title">
+                <motion.span
+                  className="subtitle-text"
+                  variants={fadeInUpVariants}
+                >
+                  {t('hero_subtitle')}
+                </motion.span>
+                <motion.span className="name-text" variants={fadeInUpVariants}>
+                  {t('name')}
+                </motion.span>
+              </h1>
+            </div>
+
+            <motion.div
+              className="hero-description"
+              variants={containerVariants}
+            >
+              <motion.p variants={fadeInUpVariants}>
+                {t('cabinet_page_description_1')}
+              </motion.p>
+              <motion.p variants={fadeInUpVariants}>
+                {t('cabinet_page_description_2')}
+              </motion.p>
+              <motion.p variants={fadeInUpVariants}>
+                {t('cabinet_page_description_3')}
+              </motion.p>
+            </motion.div>
+          </motion.div>
+
+          <motion.div className="hero-image" variants={slideInRightVariants}>
+            <div className="image-container">
+              <div className="image-frame">
+                <img
+                  src="/images/asmae-cabinet-image.webp"
+                  alt="Asmae"
+                  className="profile-image"
+                />
+                <div className="image-overlay"></div>
+              </div>
+              <div className="image-decorations">
+                <div className="decoration-element element-1"></div>
+                <div className="decoration-element element-2"></div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Info Blocks Section */}
+        <motion.div
+          className="info-blocks-section"
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
+        >
+          <motion.div className="section-header" variants={fadeInUpVariants}>
+            <h2 className="section-title">{t('cabinet_page_section_title')}</h2>
+            <p className="section-subtitle">
+              {t('cabinet_page_section_subtitle')}
+            </p>
+            <div className="title-decoration"></div>
+          </motion.div>
+
+          <div className="info-blocks-grid">
+            {infoBlocks.map((block, index) => (
+              <motion.div
+                key={index}
+                className="info-block"
+                variants={fadeInUpVariants}
+                transition={{ delay: index * 0.2 }}
+              >
+                <div className="block-header">
+                  <div className="icon-wrapper">
+                    <block.icon className="block-icon" />
+                  </div>
+                  <div className="block-number">
+                    {String(index + 1).padStart(2, '0')}
+                  </div>
+                </div>
+                <div className="block-content">
+                  <h3 className="block-title">{block.title}</h3>
+                  <p className="block-description">{block.description}</p>
+                </div>
+                <div className="block-decoration"></div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div className="cta-section" variants={fadeInUpVariants}>
+          <div className="cta-content">
+            <div className="cta-header">
+              <h3>{t('cabinet_page_cta_title')}</h3>
+              <p>{t('cabinet_page_cta_subtitle')}</p>
+            </div>
+            <div className="cta-actions">
+              <a href="tel:+33641228153" className="cta-button primary">
+                {t('cabinet_page_cta_call')}
+              </a>
+              <a
+                href="mailto:asmaekirimov.avocat@gmail.com"
+                className="cta-button secondary"
+              >
+                {t('cabinet_page_cta_email')}
+              </a>
             </div>
           </div>
-          <img src="/images/asmae-cabinet-image.webp" alt="Asmae" />
-        </div>
-        <div className="additional-info">
-          <div className="info-block">
-            <h2>
-              Une formation spécialisée en droit européen et international
-            </h2>
-            <p>
-              Titulaire d’un Master en droit européen et international, j’ai
-              complété ma formation à l’École des avocats Aliénor de Bordeaux.
-              Ce parcours universitaire m’a permis d’acquérir une solide
-              maîtrise des enjeux juridiques à l’échelle nationale et
-              internationale. Il constitue le socle de mes compétences,
-              notamment dans l’accompagnement des entreprises dans leurs projets
-              transfrontaliers. Cette spécialisation m’offre également une
-              compréhension fine des problématiques juridiques liées à la
-              mobilité des personnes.
-            </p>
-          </div>
-
-          <div className="info-block">
-            <h2>Un parcours professionnel riche et diversifié</h2>
-            <p>
-              Avant de fonder mon propre cabinet à Pau, j’ai exercé au sein de
-              cabinets d’avocats, de l’administration française et d’une
-              juridiction administrative. Ces expériences variées m’ont permis
-              d’aborder le droit tant du point de vue du conseil que du
-              contentieux, et de me familiariser avec les attentes concrètes des
-              justiciables comme des institutions. Cette diversité me permet
-              aujourd’hui d’adopter une approche pragmatique, réactive et
-              adaptée à chaque situation.
-            </p>
-          </div>
-
-          <div className="info-block">
-            <h2>Une structure indépendante au service de vos droits</h2>
-            <p>
-              En créant mon cabinet, j’ai fait le choix de vous proposer une
-              relation directe, personnalisée et transparente. Je suis votre
-              unique interlocutrice, disponible pour vous écouter et défendre
-              vos intérêts avec rigueur. Ma démarche repose sur la confiance, la
-              clarté et l’efficacité. Basée à Pau, j’interviens aussi bien
-              localement qu’à distance, grâce à des procédures dématérialisées
-              lorsque cela est possible.
-            </p>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

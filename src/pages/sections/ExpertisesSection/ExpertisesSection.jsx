@@ -59,7 +59,7 @@ export const ExpertisesSection = () => {
   };
 
   const handleExpertiseClick = () => {
-    navigate('/services');
+    navigate('/expertises');
   };
 
   // Animation variants

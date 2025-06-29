@@ -22,7 +22,7 @@ export default function TitresSejourOQTF() {
         <nav className="nav-buttons">
           <button
             className="back-button"
-            onClick={() => navigate('/services')}
+            onClick={() => navigate('/expertises')}
             aria-label={t('back_to_services')}
           >
             ← {t('back_to_services')}
