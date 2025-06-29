@@ -73,8 +73,8 @@
 
   .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1.5fr 1fr;
-    gap: 60px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
     margin-bottom: 60px;
 
     @media (max-width: 1024px) {
@@ -93,7 +93,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 300px;
+    min-height: 350px;
 
     .description-content {
       .title {
@@ -222,10 +222,6 @@
         margin: 10px 0 0 0;
         padding-top: 20px;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
-
-        @media (max-width: 768px) {
-          text-align: center;
-        }
       }
     }
   }
@@ -255,10 +251,15 @@
   }
 
   .links {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+
     .footer-links-list {
       list-style: none;
       margin: 0;
       padding: 0;
+      flex: 1;
 
       li {
         margin-bottom: 12px;
@@ -297,10 +298,15 @@
   }
 
   .contact {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+
     .contact-list {
       list-style: none;
       margin: 0;
       padding: 0;
+      flex: 1;
 
       .contact-item {
         display: flex;
@@ -364,10 +370,15 @@
   }
 
   .time {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+
     .schedule-list {
       list-style: none;
       margin: 0;
       padding: 0;
+      flex: 1;
 
       .schedule-item {
         display: flex;
@@ -486,6 +497,12 @@
           }
         }
       }
+    }
+
+    .links,
+    .contact,
+    .time {
+      min-height: auto;
     }
   }
 }

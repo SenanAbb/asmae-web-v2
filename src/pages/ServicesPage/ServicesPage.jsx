@@ -1,11 +1,11 @@
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
 import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   AiOutlineArrowRight,
-  AiFillBank,
+  AiOutlineBusiness,
   AiOutlineGlobal,
   AiOutlineUser,
 } from 'react-icons/ai';
@@ -16,7 +16,7 @@ const servicesData = [
   {
     familyKey: 'services_page_family_1',
     familyDesc: 'services_page_family_1_description',
-    icon: AiFillBank,
+    icon: AiOutlineBusiness,
     color: 'primary',
     links: [
       {
@@ -80,7 +80,17 @@ const servicesData = [
 export default function ServicesPage() {
   const { t } = useTranslation();
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+
+  // Trigger animations on component mount
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setHasLoaded(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   // Animation variants
   const containerVariants = {
@@ -124,6 +134,8 @@ export default function ServicesPage() {
     },
   };
 
+  const shouldAnimate = hasLoaded || isInView;
+
   return (
     <section
       className="services-page"
@@ -145,7 +157,7 @@ export default function ServicesPage() {
           className="page-header"
           variants={containerVariants}
           initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
+          animate={shouldAnimate ? 'visible' : 'hidden'}
         >
           <motion.div className="header-content" variants={fadeInUpVariants}>
             <div className="logo-container">
@@ -166,7 +178,7 @@ export default function ServicesPage() {
           className="services-grid"
           variants={containerVariants}
           initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
+          animate={shouldAnimate ? 'visible' : 'hidden'}
         >
           {servicesData.map(
             ({ familyKey, familyDesc, icon, color, links }, index) => (
@@ -216,7 +228,12 @@ export default function ServicesPage() {
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div className="cta-section" variants={fadeInUpVariants}>
+        <motion.div
+          className="cta-section"
+          variants={fadeInUpVariants}
+          initial="hidden"
+          animate={shouldAnimate ? 'visible' : 'hidden'}
+        >
           <div className="cta-content">
             <div className="cta-header">
               <h3>{t('services_page_cta_title')}</h3>

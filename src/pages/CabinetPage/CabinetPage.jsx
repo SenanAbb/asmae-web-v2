@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
 import { motion, useInView } from 'framer-motion';
@@ -8,7 +8,17 @@ import './CabinetPage.css';
 export default function CabinetPage() {
   const { t } = useTranslation();
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+
+  // Trigger animations on component mount
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setHasLoaded(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   // Animation variants
   const containerVariants = {
@@ -85,6 +95,8 @@ export default function CabinetPage() {
     },
   ];
 
+  const shouldAnimate = hasLoaded || isInView;
+
   return (
     <section className="cabinet-page" ref={ref}>
       {/* Background Elements */}
@@ -101,7 +113,7 @@ export default function CabinetPage() {
           className="hero-section"
           variants={containerVariants}
           initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
+          animate={shouldAnimate ? 'visible' : 'hidden'}
         >
           <motion.div className="hero-content" variants={slideInLeftVariants}>
             <div className="hero-header">
@@ -157,7 +169,7 @@ export default function CabinetPage() {
           className="info-blocks-section"
           variants={containerVariants}
           initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
+          animate={shouldAnimate ? 'visible' : 'hidden'}
         >
           <motion.div className="section-header" variants={fadeInUpVariants}>
             <h2 className="section-title">{t('cabinet_page_section_title')}</h2>
@@ -194,7 +206,12 @@ export default function CabinetPage() {
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div className="cta-section" variants={fadeInUpVariants}>
+        <motion.div
+          className="cta-section"
+          variants={fadeInUpVariants}
+          initial="hidden"
+          animate={shouldAnimate ? 'visible' : 'hidden'}
+        >
           <div className="cta-content">
             <div className="cta-header">
               <h3>{t('cabinet_page_cta_title')}</h3>
