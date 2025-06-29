@@ -5,7 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   AiOutlineArrowRight,
-  AiOutlineBusiness,
+  AiFillBank,
   AiOutlineGlobal,
   AiOutlineUser,
 } from 'react-icons/ai';
@@ -16,7 +16,7 @@ const servicesData = [
   {
     familyKey: 'services_page_family_1',
     familyDesc: 'services_page_family_1_description',
-    icon: AiOutlineBusiness,
+    icon: AiFillBank,
     color: 'primary',
     links: [
       {
