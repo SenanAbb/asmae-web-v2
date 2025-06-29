@@ -1,12 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Footer.css';
-import {
-  AiFillFacebook,
-  AiFillInstagram,
-  AiFillLinkedin,
-  AiFillMail,
-  AiFillPhone,
-} from 'react-icons/ai';
+import { AiFillLinkedin, AiFillMail, AiFillPhone } from 'react-icons/ai';
 import { useTranslation } from 'react-i18next';
 import { BsFillPinMapFill } from 'react-icons/bs';
 
@@ -35,8 +29,10 @@ export const Footer = () => {
                     className="footer-logo"
                   />
                 </div>
-                <h4 className="footer-name">Asmae Kirimov</h4>
-                <div className="title-decoration"></div>
+                <div className="title-content">
+                  <h4 className="footer-name">Asmae Kirimov</h4>
+                  <div className="title-decoration"></div>
+                </div>
               </div>
 
               <div className="description-text">

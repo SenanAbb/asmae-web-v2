@@ -218,7 +218,6 @@ export const HeroSection = () => {
           >
             <AiOutlineArrowDown size={20} />
           </motion.div>
-          <div className="scroll-text">Descubre más</div>
         </motion.div>
       </div>
     </section>
