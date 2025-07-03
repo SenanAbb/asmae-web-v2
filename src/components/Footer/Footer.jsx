@@ -41,7 +41,7 @@ export const Footer = () => {
 
               <div className="social">
                 <Link
-                  to="https://www.linkedin.com/"
+                  to="https://www.linkedin.com/in/asmae-kirimov-528443267/"
                   target="_blank"
                   className="social-link"
                   aria-label="LinkedIn"

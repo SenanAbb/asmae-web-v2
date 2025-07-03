@@ -112,7 +112,7 @@ export const HeroSection = () => {
 
   const socialLinks = [
     {
-      href: 'https://www.linkedin.com/',
+      href: 'https://www.linkedin.com/in/asmae-kirimov-528443267/',
       icon: AiFillLinkedin,
       label: 'LinkedIn',
     },
