@@ -52,7 +52,7 @@ export const HamburgerIcon = () => {
     { to: '/cabinet', label: t('navbar_about_label') },
     { to: '/expertises', label: t('navbar_expertises_label') },
     { to: '/?scrollTo=contact', label: t('navbar_contact_label') },
-    { to: '/honoraires', label: t('navbar_honoraires_label') },
+    // { to: '/honoraires', label: t('navbar_honoraires_label') },
   ];
 
   return (

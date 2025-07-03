@@ -139,7 +139,11 @@ export const HeroSection = () => {
         muted
         playsInline
       >
-        <source src="videos/hero-video.mp4" type="video/mp4" />
+        <source
+          src="videos/hero-video.mp4"
+          type="video/mp4"
+          title="Hero Video"
+        />
       </video>
 
       {/* Enhanced Overlay */}
