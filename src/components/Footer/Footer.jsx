@@ -174,14 +174,19 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="footer-bottom">
           <div className="bottom-content">
-            <p className="bottom-text">{t('footer_bottom_text')}</p>
+            <p className="bottom-text">
+              {t('footer_bottom_text')} {' '}
+              <Link
+                to="https://www.linkedin.com/in/sanan-abbasov/"
+                className="bottom-link"
+                target="_blank"
+              >
+                {t('footer_bottom_link')}
+              </Link>
+            </p>
             <div className="bottom-links">
               <Link to="/privacy" className="bottom-link">
                 {t('footer_privacy_label')}
-              </Link>
-              <span className="separator">•</span>
-              <Link to="/terms" className="bottom-link">
-                {t('footer_terms_label')}
               </Link>
             </div>
           </div>

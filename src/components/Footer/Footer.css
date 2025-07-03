@@ -458,6 +458,16 @@
         font-size: 0.9rem;
         color: rgba(255, 255, 255, 0.7);
         margin: 0;
+
+        .bottom-link {
+          color: rgba(255, 255, 255, 0.8);
+          text-decoration: underline;
+          transition: all 0.3s ease;
+
+          &:hover {
+            color: var(--secondary-light);
+          }
+        }
       }
 
       .bottom-links {

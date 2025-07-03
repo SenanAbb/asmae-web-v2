@@ -17,6 +17,7 @@ import ProceduresDisciplinaires from '../pages/ProceduresDisciplinaires/Procedur
 import HarcelementMoral from '../pages/HarcelementMoral/HarcelementMoral';
 import MaladieProfessionnelleAccident from '../pages/MaladieProfessionnelleAccident/MaladieProfessionnelleAccident';
 import HonorairesPage from '../pages/HonorairesPage/HonorairesPage';
+import PrivacyPage from '../pages/PrivacyPage/PrivacyPage';
 
 export default function RoutesApp() {
   return (
@@ -62,7 +63,10 @@ export default function RoutesApp() {
             path="/expertises/asile-CNDA"
             element={<DemandeAsileRecoursCNDA />}
           />
-          <Route path="/expertises/sejour-OQTF" element={<TitresSejourOQTF />} />
+          <Route
+            path="/expertises/sejour-OQTF"
+            element={<TitresSejourOQTF />}
+          />
 
           {/* Fonction publique */}
           <Route
@@ -76,6 +80,16 @@ export default function RoutesApp() {
           <Route
             path="/expertises/maladie-accident"
             element={<MaladieProfessionnelleAccident />}
+          />
+
+          {/* Privacy Policy */}
+          <Route
+            path="/privacy"
+            element={
+              <h1 style={{ margin: '12dvh 0 5dvh 0' }}>
+                <PrivacyPage />
+              </h1>
+            }
           />
 
           <Route
