@@ -151,13 +151,13 @@ export const Footer = () => {
                 <span className="schedule-day">
                   {t('footer_section_monday_friday_label')}
                 </span>
-                <span className="schedule-time">12:00 - 19:00</span>
+                <span className="schedule-time">9:00 - 18:00</span>
               </li>
               <li className="schedule-item">
                 <span className="schedule-day">
                   {t('footer_section_saturday_label')}
                 </span>
-                <span className="schedule-time">12:00 - 15:00</span>
+                <span className="schedule-time">9:00 - 14:00</span>
               </li>
               <li className="schedule-item">
                 <span className="schedule-day">

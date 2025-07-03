@@ -168,7 +168,6 @@ export default function ServicesPage() {
               />
             </div>
             <h1 className="page-title">{t('services_page_main_title')}</h1>
-            <p className="page-subtitle">{t('services_page_main_subtitle')}</p>
             <div className="title-decoration"></div>
           </motion.div>
         </motion.div>
