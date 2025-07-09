@@ -22,7 +22,9 @@ export default function ProceduresDisciplinaires() {
         <nav className="nav-buttons">
           <button
             className="back-button"
-            onClick={() => navigate('/expertises')}
+            onClick={() =>
+              navigate('/expertises', { state: { scrollToId: 'publique' } })
+            }
             aria-label={t('back_to_services')}
           >
             ← {t('back_to_services')}

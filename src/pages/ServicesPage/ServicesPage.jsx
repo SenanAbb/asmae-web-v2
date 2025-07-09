@@ -1,7 +1,8 @@
-import { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 // eslint-disable-next-line no-unused-vars
 import { motion, useInView } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import {
   AiOutlineArrowRight,
@@ -10,7 +11,6 @@ import {
   AiOutlineUser,
 } from 'react-icons/ai';
 import './ServicesPage.css';
-import React from 'react';
 
 const servicesData = [
   {
@@ -18,6 +18,7 @@ const servicesData = [
     familyDesc: 'services_page_family_1_description',
     icon: AiFillBank,
     color: 'primary',
+    id: 'affaires',
     links: [
       {
         to: '/expertises/developpement-strategie',
@@ -42,6 +43,7 @@ const servicesData = [
     familyDesc: 'services_page_family_2_description',
     icon: AiOutlineGlobal,
     color: 'secondary',
+    id: 'etrangers',
     links: [
       { to: '/expertises/visa', labelKey: 'services_page_subfamily_2_1' },
       {
@@ -60,6 +62,7 @@ const servicesData = [
     familyDesc: 'services_page_family_3_description',
     icon: AiOutlineUser,
     color: 'primary-light',
+    id: 'publique',
     links: [
       {
         to: '/expertises/procedure-disciplinaire',
@@ -82,6 +85,7 @@ export default function ServicesPage() {
   const ref = useRef(null);
   const [hasLoaded, setHasLoaded] = useState(false);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const location = useLocation();
 
   // Trigger animations on component mount
   useEffect(() => {
@@ -91,6 +95,15 @@ export default function ServicesPage() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    if (location.state?.scrollToId) {
+      const element = document.getElementById(location.state.scrollToId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location.state]);
 
   // Animation variants
   const containerVariants = {
@@ -180,12 +193,13 @@ export default function ServicesPage() {
           animate={shouldAnimate ? 'visible' : 'hidden'}
         >
           {servicesData.map(
-            ({ familyKey, familyDesc, icon, color, links }, index) => (
+            ({ familyKey, familyDesc, icon, color, links, id }, index) => (
               <motion.div
                 key={familyKey}
                 className={`service-group ${color}`}
                 variants={fadeInUpVariants}
                 transition={{ delay: index * 0.2 }}
+                id={id}
               >
                 <div className="service-header">
                   <div className="icon-wrapper">
