@@ -50,7 +50,17 @@ export default function TitresSejourOQTF() {
               <strong>
                 {t(`services_page_subfamily_2_4_list_${num}_title`)}
               </strong>
-              {t(`services_page_subfamily_2_4_list_${num}_description`)}
+              {num === 1 ? (
+                <p>
+                  {t(`services_page_subfamily_2_4_list_${num}_description_1`)}
+                  <br />
+                  {t(`services_page_subfamily_2_4_list_${num}_description_2`)}
+                </p>
+              ) : (
+                <p>
+                  {t(`services_page_subfamily_2_4_list_${num}_description`)}
+                </p>
+              )}
             </li>
           ))}
         </ul>

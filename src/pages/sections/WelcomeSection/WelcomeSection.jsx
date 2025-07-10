@@ -136,9 +136,6 @@ export const WelcomeSection = () => {
                 {t('welcome_section_title')}
               </motion.span>
               <span className="name-highlight">
-                <motion.span className="surname" variants={fadeInUpVariants}>
-                  {t('welcome_section_surname')}
-                </motion.span>{' '}
                 <motion.span className="name" variants={fadeInUpVariants}>
                   {t('welcome_section_name')}
                 </motion.span>

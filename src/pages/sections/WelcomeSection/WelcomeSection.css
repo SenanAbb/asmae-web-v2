@@ -112,7 +112,7 @@
         position: relative;
         display: inline-block;
 
-        .name, .surname {
+        .name {
           background: linear-gradient(
             135deg,
             var(--primary) 0%,
@@ -123,10 +123,6 @@
           background-clip: text;
           position: relative;
           font-style: italic;
-        }
-
-        .name {
-          font-size: 6rem;
         }
 
         .name-underline {
