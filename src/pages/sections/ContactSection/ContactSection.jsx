@@ -104,7 +104,6 @@ export const ContactSection = () => {
           <div className="form-container">
             <div className="form-header">
               <h2 className="form-title">{t('contact_section_title')}</h2>
-              <p className="form-subtitle">{t('contact_section_subtitle')}</p>
             </div>
 
             <form onSubmit={handleSubmit} className="contact-form">
@@ -143,7 +142,9 @@ export const ContactSection = () => {
                       onChange={handleChange}
                       autoComplete="family-name"
                       className="form-input"
-                      placeholder={t('contact_section_form_lastname_placeholder')}
+                      placeholder={t(
+                        'contact_section_form_lastname_placeholder'
+                      )}
                     />
                     <div className="input-border"></div>
                   </div>
