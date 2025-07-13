@@ -47,6 +47,8 @@ export const ContactSection = () => {
         body: JSON.stringify(formData),
       });
 
+      console.log(getApiBaseURL());
+
       if (res.ok) {
         setSent(true);
         setFormData({
