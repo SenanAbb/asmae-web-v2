@@ -40,7 +40,8 @@ export const ContactSection = () => {
     setError(null);
 
     try {
-      const res = await fetch(`${getApiBaseURL()}/send-email`, {
+      const res = await fetch('/api/send-email', {
+        // Ruta relativa aquí
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
