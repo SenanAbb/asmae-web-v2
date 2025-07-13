@@ -33,7 +33,6 @@ export const ContactSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (!isFormValid) return;
 
     setSending(true);
