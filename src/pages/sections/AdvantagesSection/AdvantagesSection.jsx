@@ -16,7 +16,11 @@ export const AdvantagesSection = () => {
         {/* Header con logo */}
         <div className="section-header">
           <div className="logo-container">
-            <img src="/images/logo-color.webp" alt="Logo" className="brand-logo" />
+            <img
+              src="/images/logo-color.webp"
+              alt="Logo"
+              className="brand-logo"
+            />
           </div>
           <h2 className="title">{t('advantages_section_title')}</h2>
           <p className="subtitle">{t('advantages_section_subtitle')}</p>
@@ -29,12 +33,12 @@ export const AdvantagesSection = () => {
               <div className="icon-wrapper">
                 <AiOutlineFieldTime className="icon" />
               </div>
-              <div className="card-number">01</div>
-            </div>
-            <div className="card-content">
               <h3 className="card-title">
                 {t('advantages_section_item_1_title')}
               </h3>
+              <div className="card-number">01</div>
+            </div>
+            <div className="card-content">
               <p className="card-text">
                 {t('advantages_section_item_1_description')}
               </p>
@@ -47,12 +51,12 @@ export const AdvantagesSection = () => {
               <div className="icon-wrapper">
                 <AiOutlineUser className="icon" />
               </div>
-              <div className="card-number">02</div>
-            </div>
-            <div className="card-content">
               <h3 className="card-title">
                 {t('advantages_section_item_2_title')}
               </h3>
+              <div className="card-number">02</div>
+            </div>
+            <div className="card-content">
               <p className="card-text">
                 {t('advantages_section_item_2_description')}
               </p>
@@ -65,12 +69,12 @@ export const AdvantagesSection = () => {
               <div className="icon-wrapper">
                 <AiOutlineEye className="icon" />
               </div>
-              <div className="card-number">03</div>
-            </div>
-            <div className="card-content">
               <h3 className="card-title">
                 {t('advantages_section_item_3_title')}
               </h3>
+              <div className="card-number">03</div>
+            </div>
+            <div className="card-content">
               <p className="card-text">
                 {t('advantages_section_item_3_description')}
               </p>
@@ -83,12 +87,12 @@ export const AdvantagesSection = () => {
               <div className="icon-wrapper">
                 <AiOutlineThunderbolt className="icon" />
               </div>
-              <div className="card-number">04</div>
-            </div>
-            <div className="card-content">
               <h3 className="card-title">
                 {t('advantages_section_item_4_title')}
               </h3>
+              <div className="card-number">04</div>
+            </div>
+            <div className="card-content">
               <p className="card-text">
                 {t('advantages_section_item_4_description')}
               </p>

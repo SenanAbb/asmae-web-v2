@@ -173,9 +173,6 @@ export default function CabinetPage() {
         >
           <motion.div className="section-header" variants={fadeInUpVariants}>
             <h2 className="section-title">{t('cabinet_page_section_title')}</h2>
-            <p className="section-subtitle">
-              {t('cabinet_page_section_subtitle')}
-            </p>
             <div className="title-decoration"></div>
           </motion.div>
 

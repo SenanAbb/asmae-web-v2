@@ -34,6 +34,7 @@ export const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isFormValid) return;
+    console.log(getApiBaseURL());
 
     setSending(true);
     setError(null);
@@ -46,8 +47,6 @@ export const ContactSection = () => {
         },
         body: JSON.stringify(formData),
       });
-
-      console.log(getApiBaseURL());
 
       if (res.ok) {
         setSent(true);
