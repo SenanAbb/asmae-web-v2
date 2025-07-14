@@ -20,12 +20,6 @@ export const ContactSection = () => {
 
   const isFormValid = Object.values(formData).every((val) => val.trim() !== '');
 
-  const getApiBaseURL = () => {
-    return import.meta.env.DEV
-      ? import.meta.env.VITE_DEV_API_BASE_URL
-      : import.meta.env.VITE_PROD_API_BASE_URL;
-  };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -34,19 +28,22 @@ export const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isFormValid) return;
-    console.log(getApiBaseURL());
 
     setSending(true);
     setError(null);
 
     try {
-      const res = await fetch(`${getApiBaseURL()}/send-email`, {
+      const res = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
+
+      const contentType = res.headers.get('content-type');
+      const hasJSON = contentType && contentType.includes('application/json');
+      const data = hasJSON ? await res.json() : null;
 
       if (res.ok) {
         setSent(true);
@@ -59,11 +56,13 @@ export const ContactSection = () => {
         });
       } else if (res.status === 429) {
         setError(t('contact_section_form_error_too_many_requests'));
+      } else if (res.status === 400 && data?.error) {
+        setError(t('contact_section_form_error') + ` (${data.error})`);
       } else {
         setError(t('contact_section_form_error'));
       }
     } catch (error) {
-      console.error(error);
+      console.error('Network or unexpected error:', error);
       setError(t('contact_section_form_error'));
     } finally {
       setSending(false);
