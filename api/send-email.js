@@ -1,4 +1,4 @@
-const sgMail = require('@sendgrid/mail');
+import sgMail from '@sendgrid/mail';
 
 sgMail.setApiKey(import.meta.env.VITE_SENDGRID_API_KEY);
 
