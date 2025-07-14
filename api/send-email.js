@@ -1,18 +1,16 @@
 import sgMail from '@sendgrid/mail';
 
-sgMail.setApiKey(import.meta.env.VITE_SENDGRID_API_KEY);
+sgMail.setApiKey(process.env.VITE_SENDGRID_API_KEY);
 
 /**
  * Vercel Serverless Function
  */
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
   const { name, lastname, phone, email, message } = req.body || {};
-
-  console.log(name, lastname, phone, email, message);
 
   if (!name || !lastname || !phone || !email || !message) {
     return res.status(400).json({ error: 'Missing required fields' });
@@ -24,8 +22,8 @@ module.exports = async (req, res) => {
   }
 
   const msg = {
-    to: import.meta.env.VITE_SENDGRID_EMAIL_TO,
-    from: import.meta.env.VITE_SENDGRID_EMAIL_FROM,
+    to: process.env.VITE_SENDGRID_EMAIL_TO,
+    from: process.env.VITE_SENDGRID_EMAIL_FROM,
     subject: `New message from ${name} ${lastname}`,
     html: `
       <h3>New message from ${name} ${lastname}</h3>
@@ -42,4 +40,4 @@ module.exports = async (req, res) => {
     console.error('Send error:', error?.response?.body || error.message);
     return res.status(500).json({ error: 'Error sending email' });
   }
-};
+}
